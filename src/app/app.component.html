@@ -1,0 +1,33 @@
+
+<h1>API CALLING</h1>
+
+<div class="container" >
+
+  <table class="table">
+    <thead>
+      
+      <tr>
+        <th style="text-align:center;background-color:rgb(241, 122, 188)">Name</th>
+        <th style= "background-color:rgb(241, 122, 188); text-align:center" >Email</th>
+        <th style="background-color:rgb(241, 122, 188); text-align:center"  >User Name</th>
+        <th style="background-color:rgb(241, 122, 188); text-align:center"  >City</th>
+        <th style="background-color:rgb(241, 122, 188); text-align:center"  >Phone</th>
+        <th style="background-color:rgb(241, 122, 188); text-align:center"  >Website</th>
+        <th style="background-color:rgb(241, 122, 188); text-align:center"  >Zip-Code</th>
+      </tr>
+    </thead>
+    <tbody *ngFor="let item of apiData">
+      <tr>
+        <td style="text-align:center; color: black; background-color: rgb(155, 227, 236);">{{ item.name }}</td>
+        <td style="text-align:center;color: black; ">{{ item.email }}</td>
+        
+        <td style="text-align:center; color: black; background-color: burlywood;">{{item.username}}</td>
+        <td style="text-align:center;color: black;">{{item.address.city}}</td>
+        <td style="text-align:center;color: black;background-color: darkgoldenrod;">{{item.phone}}</td>
+        <td style="text-align:center;color: black;">{{item.website}}</td>
+        <td style="text-align:center;color: black; background-color: darkseagreen;">{{item.address.zipcode}}</td>
+      </tr>
+    </tbody>
+   
+  </table>
+</div> 
